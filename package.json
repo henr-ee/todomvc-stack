@@ -1,0 +1,25 @@
+{
+  "name": "docker_todomvc_app",
+  "version": "0.1.0",
+  "description": "Full Stack Todo MVC on Docker",
+  "author": "Wei Hao Lee <wei.hao.lee.96@hotmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "director": "^1.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.29",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1",
+    "vue": "^2.1.8"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/henr-ee/todomvc-stack.git"
+  },
+  "license": "MIT"
+}
