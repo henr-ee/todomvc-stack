@@ -1,5 +1,7 @@
 // Create express app
-var app = require('express')(),
+var express = require('express'),
+    router = express.Router(),
+    app = express();
     bodyParser = require('body-parser');
 
 // Parse requests
@@ -14,17 +16,23 @@ mongoose.Promise = global.Promise;
 
 // Connecting to database
 mongoose.connect(dbConfig.url, {
+    useUnifiedTopology: true,
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");
 }).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
+    console.log('Could not connect to the database. Now exiting...', err);
     process.exit();
 });
 
+// //Get the default connection
+// var db = mongoose.connection;
+
+// console.log(db.collection("todos").find({}));
+
 // Simple backend test route
 app.get('/', (req, res) => {
-    res.json({"message": "Working"});
+    res.json({"message": "Success"});
 });
 
 // Require routes

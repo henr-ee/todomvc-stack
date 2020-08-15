@@ -10,13 +10,13 @@ exports.create = (req, res) => {
     }
 
     // Create a Todo
-    const todo = new Todo({
+    const newTodo = new Todo({
         title: req.body.title,
         completed: false
     });
 
-    // Save of Todo in the database
-    todo.save()
+    // Save Todo in the database
+    newTodo.save()
     .then(data => {
         res.send(data);
     }).catch(err => {

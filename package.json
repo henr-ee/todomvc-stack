@@ -1,18 +1,21 @@
 {
   "name": "docker_todomvc_app",
   "version": "0.1.0",
-  "description": "Full Stack Todo MVC on Docker",
+  "description": "Full Stack (MongoDB / Express / Vue / NodeJS - MEVN) TodoMVC",
   "author": "Wei Hao Lee <wei.hao.lee.96@hotmail.com>",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "db-migrate": "^0.11.11",
     "director": "^1.2.0",
     "express": "^4.17.1",
+    "mongodb": "^2.2.33",
     "mongoose": "^5.9.29",
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.1",
@@ -22,5 +25,8 @@
     "type": "git",
     "url": "https://github.com/henr-ee/todomvc-stack.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
